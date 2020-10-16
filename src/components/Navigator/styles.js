@@ -1,16 +1,13 @@
 import styled from 'styled-components';
+import { metrics } from '../../constants/metrics';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   background: white;
-  width: 60%;
-  height: 50px;
+  height: ${metrics.headerHeight}px;
   justify-content: center;
   align-items: center;
-  margin: auto;
-`;
-
-export const Text = styled.p`
-  font-size: 10px;
+  width: 100%;
+  ${({ fixed }) => (fixed ? 'position: fixed; top: 0;' : '')};
 `;
