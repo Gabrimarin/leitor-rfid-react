@@ -11,19 +11,43 @@ import {
   Image,
   ImageContainer,
   TextImage,
+  HighlightText,
 } from '../../styles';
-import md from '../../contents/what.md';
+import what from '../../contents/what.md';
+import program from '../../contents/program.md';
+import example from '../../contents/example.md';
+import extras from '../../contents/extras.md';
 import { images } from '../../contents/images';
 import { CustomLink } from '../../components';
 
 const Material = ({ linkFunctions }) => {
   const [markdown, setMarkdown] = useState('');
+  const [markdown2, setMarkdown2] = useState('');
+  const [markdown3, setMarkdown3] = useState('');
+  const [markdown4, setMarkdown4] = useState('');
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
-    fetch(md).then((res) =>
+    fetch(what).then((res) =>
       res.text().then((m) => {
         setMarkdown(m);
+      })
+    );
+
+    fetch(program).then((res) =>
+      res.text().then((m) => {
+        setMarkdown2(m);
+      })
+    );
+
+    fetch(example).then((res) =>
+      res.text().then((m) => {
+        setMarkdown3(m);
+      })
+    );
+
+    fetch(extras).then((res) =>
+      res.text().then((m) => {
+        setMarkdown4(m);
       })
     );
   });
@@ -31,7 +55,7 @@ const Material = ({ linkFunctions }) => {
   return (
     <Container>
       <Markdown
-        children={markdown}
+        children={markdown4}
         options={{
           overrides: {
             h1: {
@@ -46,6 +70,13 @@ const Material = ({ linkFunctions }) => {
             },
             h3: {
               component: (text) => <TextImage children={text.children} />,
+            },
+            h4: {
+              component: (text) => (
+                <HighlightText>
+                  <TextImage children={text.children} />
+                </HighlightText>
+              ),
             },
             p: {
               component: (text) => (
@@ -67,6 +98,7 @@ const Material = ({ linkFunctions }) => {
                   isCustomFunc={props.function}
                   children={props.children}
                   onClick={linkFunctions[props.function]}
+                  href={props.href}
                 />
               ),
             },

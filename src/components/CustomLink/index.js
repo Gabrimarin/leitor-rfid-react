@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const CustomLink = ({ onClick, children, isCustomFunc }) => {
+const CustomLink = ({ onClick, children, isCustomFunc, href }) => {
   return isCustomFunc ? (
     <Container onClick={onClick}>{children}</Container>
   ) : (
-    <a href="https://github.com/probablyup/markdown-to-jsx">{children}</a>
+    <a href={href}>{children}</a>
   );
 };
 

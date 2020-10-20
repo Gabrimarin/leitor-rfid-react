@@ -5,6 +5,7 @@ import ContentText from './content/ContentText';
 import ContentTitle from './content/ContentTitle';
 import { AppContainer } from './AppContainer';
 import { TextImage, ImageContainer, Image } from './content/ContentImageText';
+import { HighlightText } from './content/HighlightText';
 
 export {
   AppContainer,
@@ -16,4 +17,5 @@ export {
   TextImage,
   ImageContainer,
   Image,
+  HighlightText,
 };
