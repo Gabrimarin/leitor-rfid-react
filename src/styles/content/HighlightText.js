@@ -6,11 +6,7 @@ export const HighlightText = styled.div`
   align-items: center;
   border-bottom-width: 2px;
   border-color: black;
-  background-image: linear-gradient(
-    to bottom,
-    ${`#ffffff`},
-    ${`${colors.orange}ff`}
-  );
+  margin-top: 30px;
   height: 40px;
   color: ${colors.darkBlue};
   &:hover {

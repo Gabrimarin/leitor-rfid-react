@@ -20,34 +20,34 @@ import extras from '../../contents/extras.md';
 import { images } from '../../contents/images';
 import { CustomLink } from '../../components';
 
-const Material = ({ linkFunctions }) => {
-  const [markdown, setMarkdown] = useState('');
-  const [markdown2, setMarkdown2] = useState('');
-  const [markdown3, setMarkdown3] = useState('');
-  const [markdown4, setMarkdown4] = useState('');
+const Material = ({ linkFunctions, selectedId = 1 }) => {
+  const [markdownWhat, setMarkdownWhat] = useState('');
+  const [markdownProgram, setMarkdownProgram] = useState('');
+  const [markdownExample, setMarkdownExample] = useState('');
+  const [markdownExtras, setMarkdownExtras] = useState('');
 
   useEffect(() => {
     fetch(what).then((res) =>
       res.text().then((m) => {
-        setMarkdown(m);
+        setMarkdownWhat(m);
       })
     );
 
     fetch(program).then((res) =>
       res.text().then((m) => {
-        setMarkdown2(m);
+        setMarkdownProgram(m);
       })
     );
 
     fetch(example).then((res) =>
       res.text().then((m) => {
-        setMarkdown3(m);
+        setMarkdownExample(m);
       })
     );
 
     fetch(extras).then((res) =>
       res.text().then((m) => {
-        setMarkdown4(m);
+        setMarkdownExtras(m);
       })
     );
   });
@@ -55,7 +55,11 @@ const Material = ({ linkFunctions }) => {
   return (
     <Container>
       <Markdown
-        children={markdown4}
+        children={
+          [markdownWhat, markdownProgram, markdownExample, markdownExtras][
+            selectedId
+          ]
+        }
         options={{
           overrides: {
             h1: {
@@ -74,7 +78,10 @@ const Material = ({ linkFunctions }) => {
             h4: {
               component: (text) => (
                 <HighlightText>
-                  <TextImage children={text.children} />
+                  <TextImage
+                    style={{ fontSize: 35 }}
+                    children={text.children}
+                  />
                 </HighlightText>
               ),
             },

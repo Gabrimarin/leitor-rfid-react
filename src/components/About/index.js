@@ -25,16 +25,15 @@ const About = ({ refProp }) => {
         <AnimateHeight duration={500} height={expanded ? 'auto' : 0}>
           <AboutContainer>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              semper scelerisque fermentum. Aliquam sit amet ipsum erat. Morbi
-              vel leo ornare, vestibulum lectus id, dictum massa. Aenean varius
-              vehicula sagittis. In pellentesque leo nisi, eget pretium augue
-              dapibus non. Sed id porttitor ex. Suspendisse laoreet vestibulum
-              ligula, a condimentum purus imperdiet non. Aenean neque urna,
-              tincidunt et ultricies id, dictum quis nunc. Vivamus sollicitudin
-              ut neque ut pellentesque. Sed convallis laoreet nisl, at maximus
-              orci varius eget. Nam et fermentum libero. Nullam in orci sed elit
-              dictum aliquam. Suspendiss
+              Um dos grandes feitos da tecnologia é a simplificação. Por que
+              abrir uma porta com uma chave quando eu posso usar apenas um
+              cartão? Com o leitor RFID isto é possível! A segurança e a
+              eficiência que a nossa tão dinâmica sociedade pede no dia-a-dia
+              são bem alimentadas quando nos aprofundamos em um aparelho que nos
+              permite fazer muitas coisas sem ao menos precisar tocá-las. Este
+              ambiente virtual tem o propósito de apresentar o que é o leitor
+              RFID, como ele funciona, para quê ele serve, como usá-lo, como
+              programá-lo e suas principais aplicações.
             </Text>
           </AboutContainer>
         </AnimateHeight>

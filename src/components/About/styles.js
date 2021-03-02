@@ -25,7 +25,7 @@ export const Title = styled.p`
   color: white;
   font-weight: bold;
   margin-left: 20px;
-  font-size: 35px;
+  font-size: 55px;
 `;
 
 export const ExpandButton = styled.button`

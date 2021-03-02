@@ -8,24 +8,26 @@ import Materials from './pages/Materials';
 // const scrollToRef = (ref) => window.scrollTo(0, ref?.current?.offsetTop);
 
 function App() {
-  const [selectedID, setSelectedID] = useState(0);
+  const [selectedID, setSelectedStateID] = useState(0);
   const [scrollPosition, setPosition] = useState(0);
   const [headerFixed, setHeaderFixed] = useState(false);
-
   const lastRef = useRef(null);
 
   const aboutRef = useRef(null);
-  const titles = [
-    'O que é?',
-    'Montagem',
-    'Programação',
-    'Modos de Uso',
-    'Aplicações',
-  ];
+  const titles = ['O que é?', 'Programação', 'Aplicação', 'Extras'];
   const getFooterButtonsType = () => {
     if (selectedID === 0) return 'next';
     if (selectedID === titles.length - 1) return 'back';
     return 'both';
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const setSelectedID = (id) => {
+    scrollToTop();
+    setSelectedStateID(id);
   };
 
   useLayoutEffect(() => {
@@ -54,7 +56,10 @@ function App() {
         <ContentContainer
           paddingTop={headerFixed ? metrics.headerHeight + 20 : 20}
         >
-          <Materials linkFunctions={{ goto3: () => setSelectedID(3) }} />
+          <Materials
+            linkFunctions={{ goto3: () => setSelectedID(3) }}
+            selectedId={selectedID}
+          />
           <FooterButtons
             type={getFooterButtonsType()}
             onBack={() => setSelectedID(selectedID - 1)}

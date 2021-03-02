@@ -19,8 +19,8 @@ Na utilização da biblioteca MFRC522 deve-se estabelecer a seguinte comunicaç�
 
 <img source="image2_1" />
 
-### Ligação do módulo RFDI-RC522 com Arduino
-### <a href="https://www.moduloeletronica.com.br/blog?single=Cartoes-RFID-e-o-Modulo-MFRC522">Fonte</a>
+### Ligação do módulo RFID-RC522 com Arduino
+### <a href="http://blog.moduloeletronica.com.br/cartoes-rfid-e-o-modulo-mfrc522/">Fonte</a>
 
 ## Instruções de iniciação
 

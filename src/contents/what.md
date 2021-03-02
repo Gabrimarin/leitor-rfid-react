@@ -1,9 +1,6 @@
 # O que é o Leitor RFID?
 ## Módulo Leitor RFID MFRC522
 
-<a function="goto3">LINK</a>
-<a href="http://github.com">LINK</a>
-
 <p>
 O módulo leitor RFID (Radio Frequency Identification - Identificação por radiofrequência) é constituído do chip MFRC522 da empresa NXP. A comunicação é realizada na frequência de 13,56MHz. Permite ler e escrever em cartões que seguem o padrão MIFARE. Para isso, segue o protocolo de comunicação SPI. A figura abaixo apresenta os componentes que compõem o kit do módulo leitor.
 </p>
@@ -24,10 +21,11 @@ O módulo leitor RFID armazena um número de série em um microchip. A captura d
 Para realizar a comunicação, o chip contém uma interface de RF (radiofrequência) e alguns blocos, com destaque para a memória EEPROM, na qual encontram-se os dados lidos e gravados.
 </p>
 
-## Comunicação entre o Arduino e o módulo RFDI- RC522
+## Comunicação entre o Arduino e o módulo RFID- RC522
 
 <p>
-A comunicação entre o Arduino e o módulo RFDI-RC522 segue o protocolo SPI (Detalhes em leitura complementar). Nesta comunicação, o Arduino assume a função de mestre e o módulo MFID - RC522 a função de escravo, como ilustra a figura abaixo.
+A comunicação entre o Arduino e o módulo RFID-RC522 segue o protocolo SPI 
+<a function="goto3">(Detalhes em leitura complementar).</a> Nesta comunicação, o Arduino assume a função de mestre e o módulo MFID - RC522 a função de escravo, como ilustra a figura abaixo.
 </p>
 
 <img source="image1_3" />

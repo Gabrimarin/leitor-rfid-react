@@ -15,7 +15,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 65%;
+  width: 55%;
   @media (max-width: 800px) {
     width: 100%;
   }

@@ -19,6 +19,7 @@ A transmissão dos dados é realizada através de mudanças rápidas na voltagem
 <img source="image4_1" />
 
 ### Transmissão dos dados
-### <a href="https://www.moduloeletronica.com.br/blog?single=Cartoes-RFID-e-o-Modulo-MFRC522">Fonte</a>
+### <a href="http://blog.moduloeletronica.com.br/cartoes-rfid-e-o-modulo-mfrc522/">Fonte</a>
+
 
 <img source="image4_2" />
