@@ -1,3 +1,10 @@
+# Ensino do Módulo Leitor RFID em Arduino
+
+Este projeto visa ensinar alunos de eletrônica a implementarem o módulo Leitor RFID em Arduino.
+
+## Projeto desenvolvido para o Programa Institucional de Bolsas de Iniciação Científica (PIBIC)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
