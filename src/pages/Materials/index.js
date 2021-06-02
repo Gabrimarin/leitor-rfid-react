@@ -2,8 +2,9 @@
 /* eslint-disable global-require */
 /* eslint-disable react/no-children-prop */
 import React, { useEffect, useState } from 'react';
-
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Markdown from 'markdown-to-jsx';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight';
 import { Container } from './styles';
 import {
   ContentText,
@@ -79,7 +80,7 @@ const Material = ({ linkFunctions, selectedId = 1 }) => {
               component: (text) => (
                 <HighlightText>
                   <TextImage
-                    style={{ fontSize: 35 }}
+                    style={{ fontSize: 25 }}
                     children={text.children}
                   />
                 </HighlightText>
@@ -107,6 +108,13 @@ const Material = ({ linkFunctions, selectedId = 1 }) => {
                   onClick={linkFunctions[props.function]}
                   href={props.href}
                 />
+              ),
+            },
+            code: {
+              component: ({ children }) => (
+                <SyntaxHighlighter language="c" style={docco}>
+                  {children}
+                </SyntaxHighlighter>
               ),
             },
           },

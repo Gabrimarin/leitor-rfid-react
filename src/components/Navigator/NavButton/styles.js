@@ -10,6 +10,7 @@ export const Text = styled.p`
 
 export const Container = styled.button`
   flex-grow: 1;
+  width: 25%;
   border-width: 0px;
   height: 100%;
   cursor: pointer;
@@ -25,7 +26,6 @@ export const Container = styled.button`
     selected &&
     `${Text} {
       font-size: 16px;
-      font-weight: 600;
     }
     border-bottom-width: 3px;
     border-color: ${colors.yellow};
